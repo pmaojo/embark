@@ -189,12 +189,12 @@ class Cmd {
           serverHost: nullify(options.host),
           client: options.client || 'geth',
           locale: options.locale,
-          runWebserver: options.noserver === null ? null : !options.noserver,
+          runWebserver: !options.noserver ? null : false,
           useDashboard: !options.nodashboard,
           logFile: options.logfile,
           logLevel: options.loglevel,
           webpackConfigName: options.pipeline || 'development',
-          openBrowser: options.nobrowser === null ? null : !options.nobrowser
+          openBrowser: !options.nobrowser ? null : false
         });
       });
   }
