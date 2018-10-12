@@ -573,7 +573,7 @@ class EmbarkController {
         engine.logger.error(err.message || err);
       }
 
-      process.exit();
+      process.exit(err ? 1 : 0);
     });
   }
 }
